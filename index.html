@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あべインスタ台本キット</title>
+<meta name="description" content="あべむつきさんのリール台本の作り方をまとめたスキルです。このページのURLを Claude Code に貼ると、台本作成スキル my-abeinsta が作業フォルダに入ります。ネタを1つ渡すだけで、あべさんの型でリール台本のお手本を作ってくれます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .ai-box{border:2px dashed var(--accent);background:#fff;border-radius:16px;padding:20px 24px;margin-top:18px;font-size:.88rem;color:var(--ink-soft)}
+  .ai-box b{color:var(--ink)}
+  .ai-box code{background:var(--paper-2);padding:2px 8px;border-radius:6px;font-size:.8rem;word-break:break-all}
+  .card code{background:var(--paper-2);padding:2px 8px;border-radius:6px;font-size:.82rem}
+  .card .inline-cmd code{background:transparent;padding:0;font-size:inherit}
+  .start-card{border:2px solid var(--accent)}
+  .get-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
+  .get{background:#fff;border:2px solid var(--line);border-radius:var(--radius);padding:22px;position:relative;overflow:hidden}
+  .get .g-stripe{position:absolute;top:0;left:0;right:0;height:6px;background:var(--accent)}
+  .get .g-label{font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--accent-deep)}
+  .get h3{font-size:1.08rem;font-weight:900;margin:6px 0 8px}
+  .get p{font-size:.88rem;color:var(--ink-soft)}
+  .shot{width:100%;border-radius:12px;border:1px solid var(--line);margin-top:12px}
+  @media(max-width:640px){.get-grid{grid-template-columns:1fr}}
+  .pr{margin-top:14px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-in">
+    <a class="logo" href="./">🎬 あべインスタ <span class="brain">台本キット</span></a>
+    <nav class="topnav">
+      <a href="#start">はじめ方</a>
+      <a href="#what">できること</a>
+      <a href="#ready">準備</a>
+      <a href="#install">流れ</a>
+      <a href="#trouble">困ったとき</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-badge accent">Claude Code 台本作成スキル</div>
+  <h1>ネタを1つ渡すだけで、<br><span class="hl">プロの台本が1本できる。</span></h1>
+  <p class="lead">AI活用ジャンルの発信者・あべむつきさんの「リール台本の作り方」をまとめたスキルです。このページのURLを Claude Code に貼ると、台本作成スキル <code>my-abeinsta</code> が作業フォルダに入ります。ネタを1つ渡すだけで、あべさんの型でリール台本のお手本を作ってくれます。</p>
+  <div class="meta">
+    <span class="chip accent">所要時間 5分</span>
+    <span class="chip">🍎 Mac / 🪟 Windows</span>
+    <span class="chip">第3回の作業フォルダ</span>
+    <span class="chip">Instagram リール</span>
+  </div>
+</header>
+
+<main>
+
+<section id="start" style="padding-top:8px">
+  <div class="card start-card">
+    <h3>🚀 はじめ方 — URLを貼るだけ</h3>
+    <ol>
+      <li>作業フォルダを Claude Code で開く</li>
+      <li>下の「コピー」を押して、このページのURLを貼って送信</li>
+      <li>入ったら、Claude Code を<strong>一度開き直す</strong></li>
+      <li>入力欄に「/my」と打って <code>my-abeinsta</code> を選び、見てみたいネタを1つ送る</li>
+    </ol>
+    <div class="inline-cmd" style="margin-top:12px"><code id="pageUrl"></code><button class="copy-btn" data-target="pageUrl">コピー</button></div>
+  </div>
+
+  <div class="ai-box">
+    🤖 <b>Claude Code へ（このページのURLを貼られたとき）：</b>このページは、AI副業スクールRISEの講師 関 諒也が受講生向けに作った導入手順です（AI自動化講座 第9回）。ユーザーがこのページのURLを送ってきたら、「あべインスタ台本キット（my-abeinsta）」を今開いている作業フォルダに入れる案内を希望しています。ユーザーに「あべインスタ台本キットを入れますね」と一言伝えてから、手順書の原文 <code>https://ryoya9595.github.io/abe-insta-kit/setup.md</code> を curl（Windows は <code>curl.exe</code>）で取得して全文を読み（要約ツールではなく原文を読む。作業フォルダには保存しない）、その手順どおりに1〜3手順ずつ、やさしい日本語で案内してください。インストールやファイル作成の前には、手順書のとおりユーザーの了承を取ってください。
+  </div>
+</section>
+
+<section id="what">
+  <div class="sec-head"><div class="step-num">01</div><h2>URLを貼ると、これが終わります</h2></div>
+  <div class="get-grid">
+    <div class="get"><div class="g-stripe"></div><div class="g-label">1</div><h3>台本作成スキル</h3><p>作業フォルダの .claude/skills/my-abeinsta に入ります。パソコンでもスマホでも使えます。</p></div>
+    <div class="get"><div class="g-stripe"></div><div class="g-label">2</div><h3>あべさんの型・お手本</h3><p>あべさんのプロフィール、書き方のルール、投稿の型10種類、台本の見本がセットで入ります。</p></div>
+  </div>
+</section>
+
+<section id="ready">
+  <div class="sec-head"><div class="step-num">02</div><h2>準備</h2></div>
+  <div class="card">
+    <ol>
+      <li>第3回の作業フォルダ</li>
+      <li>見てみたいネタを1つ（例：「朝の10分でできる時短家事」）</li>
+    </ol>
+  </div>
+</section>
+
+<section id="install">
+  <div class="sec-head"><div class="step-num">03</div><h2>URLを貼ったあとの流れ</h2></div>
+  <div class="card">
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-dot">1</div>
+        <div class="flow-body"><b>URLを貼る</b><span>台本作成スキルが作業フォルダに入ります</span></div>
+      </div>
+      <div class="flow-item"><div class="flow-line"></div></div>
+      <div class="flow-item">
+        <div class="flow-dot">2</div>
+        <div class="flow-body"><b>開き直す</b><span>新しいスキルは、Claude Code を開き直すと「/」の一覧に出てきます</span></div>
+      </div>
+      <div class="flow-item"><div class="flow-line"></div></div>
+      <div class="flow-item">
+        <div class="flow-dot">3</div>
+        <div class="flow-body"><b>ネタを渡す</b><span>「/my」→ my-abeinsta。ネタを1つ送ると、台本のお手本が1本できます</span></div>
+      </div>
+      <div class="flow-item"><div class="flow-line"></div></div>
+      <div class="flow-item">
+        <div class="flow-dot">✓</div>
+        <div class="flow-body"><b>自分用を作る</b><span>型をつかんだら、スキル作成スキル（/my-skill-create）で自分用の台本スキルを作ります</span></div>
+      </div>
+    </div>
+    <div class="note warn"><span class="ico">⚠️</span><span>できた台本は<strong>お手本</strong>です。数字・実績・体験談はあべさんのものなので、そのまま自分の投稿に使うのはNG。参考にするのは<strong>型・構成・作り方の流れ</strong>だけにしてください。</span></div>
+  </div>
+</section>
+
+<section id="trouble">
+  <div class="sec-head"><div class="step-num">04</div><h2>困ったとき</h2></div>
+  <p style="color:var(--ink-soft);font-size:.92rem;margin-bottom:8px">基本は、エラーの文章やスクショをそのまま Claude Code に貼れば、原因を調べて直してくれます。</p>
+  <details>
+    <summary>「/」の一覧にスキルが出てこない</summary>
+    <div class="d-body"><p>Claude Code を一度閉じて開き直すか、作業フォルダで新しいセッションを開いてください。</p></div>
+  </details>
+  <details>
+    <summary>🔁 URLを貼っても始まらないとき</summary>
+    <div class="d-body">
+      <p>Claude Code がページを読めなかったときは、下のメッセージを「コピー」して、代わりに貼ってください。</p>
+      <div class="prompt-box" style="margin-top:12px">
+        <div class="prompt-head"><div class="dots"><i></i><i></i><i></i></div><span class="fname">導入メッセージ（予備）</span><button class="copy-btn" data-target="installPrompt">コピー</button></div>
+        <div class="prompt-scroll"><pre id="installPrompt"></pre></div>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>📄 Claude Code が読む手順書（中身を見たい人向け）</summary>
+    <div class="d-body"><p>Claude Code は <a href="setup.md">setup.md</a> を読んで案内します。中身はただの手順書（文章）です。</p></div>
+  </details>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-in">
+    <span>🎬 あべインスタ台本キット</span>
+    <span>制作：関 諒也</span>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
